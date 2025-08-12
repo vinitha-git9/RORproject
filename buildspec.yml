@@ -17,9 +17,9 @@ phases:
   build:
     commands:
       - echo Building Rails app Docker image...
-      - docker build -t $REPOSITORY_URI_APP:$IMAGE_TAG ./docker/app
+      - docker build -f docker/app/Dockerfile -t $REPOSITORY_URI_APP:$IMAGE_TAG .
       - echo Building Nginx Docker image...
-      - docker build -t $REPOSITORY_URI_NGINX:$IMAGE_TAG ./docker/nginx
+      - docker build -f docker/nginx/Dockerfile $REPOSITORY_URI_NGINX:$IMAGE_TAG ./docker/nginx
 
   post_build:
     commands:
