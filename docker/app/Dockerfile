@@ -1,4 +1,4 @@
-FROM public.ecr.aws/docker/library/ruby:3.2-alpine3.21
+FROM public.ecr.aws/docker/library/ruby:3.2
 
 RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs shared-mime-info curl npm
 RUN npm install -g yarn
