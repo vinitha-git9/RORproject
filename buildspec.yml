@@ -28,9 +28,7 @@ phases:
       - echo Pushing Nginx Docker image to ECR...
       - docker push $REPOSITORY_URI_NGINX:$IMAGE_TAG
       - echo Writing image definitions file for ECS...
-      - printf '[{"name":"rails_app","imageUri":"%s"},{"name":"nginx","imageUri":"%s"}]' \
-        $REPOSITORY_URI_APP:$IMAGE_TAG $REPOSITORY_URI_NGINX:$IMAGE_TAG > imagedefinitions.json
-
+      - printf '[{"name":"rails_app","imageUri":"%s"},{"name":"nginx","imageUri":"%s"}]' $REPOSITORY_URI_APP:$IMAGE_TAG $REPOSITORY_URI_NGINX:$IMAGE_TAG > imagedefinitions.json
 artifacts:
   files:
     - imagedefinitions.json
