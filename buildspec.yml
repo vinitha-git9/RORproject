@@ -6,7 +6,7 @@ env:
     ACCOUNT_ID: 924262153644
     IMAGE_TAG: latest
     REPOSITORY_URI_APP: 924262153644.dkr.ecr.us-east-1.amazonaws.com/rails_app
-    REPOSITORY_URI_NGINX: 924262153644.dkr.ecr.us-east-1.amazonaws.com/nginx
+    REPOSITORY_URI_NGINX: 924262153644.dkr.ecr.us-east-1.amazonaws.com/webserver
 
 phases:
   pre_build:
